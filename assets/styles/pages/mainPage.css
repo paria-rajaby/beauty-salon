@@ -1,0 +1,93 @@
+header{
+    position: relative;
+}
+.header-img{
+    width: 100%;
+    position: sticky;
+    height: 600px;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+.header-content_wrapper{
+    position: absolute;
+    height: 400px;
+    margin-top: 80px;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    /* backdrop-filter: blur(10px); */
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.header-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.salon-name{
+    font-size: 4rem;
+    margin-top: 80px;
+    line-height: 41px;
+    font-family: "vazir-bold";
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+}
+.header-topbars{
+    display: flex;
+    align-items: center;
+    height: 36px;
+    gap: 2rem;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 6000ms ease-in;
+}
+.header-topbars li{
+    transition: all 200ms ease-in;
+}
+.header-topbars li:hover{
+    padding: 5px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+.information{
+    background-color: #ffedd8;
+    padding: 20px 0;
+}
+.informations-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.info-icons{
+    width: 64px;
+    height: 64px;
+}
+.line-between{
+    display: block;
+    height: 100px;
+    width: 2px;
+    background-color: var(--primary-color);
+}
+.info-wrapper span{
+    font-family: "vazir-bold" ;
+}
+.info-wrapper p{
+    text-align: center;
+}
