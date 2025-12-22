@@ -222,3 +222,35 @@ header{
 .specialist-info span{
     font-family: "vazir-bold";
 }
+/* Specialists section */
+
+/* Salon info section  */
+
+.salon-info{
+    margin-top: 100px;
+}
+.salon-info_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.salon-info_wrapper img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.salon-info-texts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+}
+.salon-info-texts h2{
+    font-size: 32px;
+    font-family: "vazir-bold" ;
+}
+.salon-info-texts span{
+    line-height: 1.8;
+    width: 600px;
+}
