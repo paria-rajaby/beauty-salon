@@ -176,4 +176,49 @@ header{
     border-radius: 20px;
     padding: 10px;
 }
-  
+/* services section  */
+ 
+/* Specialists section */
+.Specialists{
+    margin-top: 100px;
+}
+.Specialists h2{
+    text-align: center;
+    font-size: 32px;
+    font-family: "vazir-bold" ;
+}
+.Specialists-wrapper{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.specialist{
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 200ms ease-in;
+}
+.specialist:hover{
+    transform: translateY(-5px);
+}
+.specialist img{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+.specialist-info{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.specialist-info span{
+    font-family: "vazir-bold";
+}
