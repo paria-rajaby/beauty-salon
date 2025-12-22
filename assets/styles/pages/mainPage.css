@@ -29,7 +29,6 @@ header{
 .salon-name{
     font-size: 4rem;
     margin-top: 80px;
-    line-height: 41px;
     font-family: "vazir-bold";
     text-align: center;
     color: white;
@@ -251,6 +250,31 @@ header{
     font-family: "vazir-bold" ;
 }
 .salon-info-texts span{
-    line-height: 1.8;
     width: 600px;
+}
+/* Salon info section  */
+
+/* footer section */
+footer{
+    margin-top: 100px;
+    background-color: #ffedd8;
+}
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 50px 0;
+}
+.footer-wrapper span{
+    font-size: 26px;
+    font-family: "vazir-bold" ;
+}
+.footerr-svgs{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.footer-text{
+    text-align: center;
 }
