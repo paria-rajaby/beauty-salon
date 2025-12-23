@@ -1,0 +1,77 @@
+@import './mainPage.css';
+/* header section  */
+.header-icons-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+ /* header section  */ 
+
+ /* services info section   */ 
+.services-info-wrapper{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+.services-info_top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.services-info_top h1{
+    font-size: 32px;
+    font-family: "vazir-bold";
+}
+.services-info_top img{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+}
+.services-info_middle{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px
+}
+.specialist-section{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.specialist-section img{
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+.specialist-section span{
+    font-size: 28px;
+    font-family: "vazir-bold";
+}
+.services-info_bottom{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+.services-info_bottom button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-family: "vazir-bold";
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+}
+.services-info_bottom button img{
+    width: 28px;
+    height: 28px;
+}
+ /* services info section   */ 

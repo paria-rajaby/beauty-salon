@@ -1,5 +1,5 @@
 /* header section */
-header{
+.header{
     position: relative;
 }
 .header-img{
@@ -56,7 +56,7 @@ header{
 /* information section  */
 
 .information{
-    background-color: #ffedd8;
+    background-color: var(--secondary-color);
     padding: 20px 0;
 }
 .informations-wrapper{
@@ -257,7 +257,7 @@ header{
 /* footer section */
 footer{
     margin-top: 100px;
-    background-color: #ffedd8;
+    background-color: var(--secondary-color);
 }
 .footer-wrapper{
     display: flex;
