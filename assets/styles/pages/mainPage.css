@@ -43,11 +43,20 @@
     padding: 10px 20px;
     border-radius: 20px;
 }
+.header-top_button{
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "vazir-bold";
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+}
 .header-topbars li{
     transition: all 200ms ease-in;
 }
 .header-topbars li:hover{
-    padding: 5px;
+    padding: 0 5px;
     background-color: var(--primary-color);
     border-radius: 20px;
 }
