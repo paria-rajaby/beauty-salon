@@ -26,6 +26,9 @@
     align-items: center;
     justify-content: space-between;
 }
+.header-top_menu{
+    display: none;
+}
 .salon-name{
     font-size: 4rem;
     margin-top: 80px;
@@ -286,4 +289,136 @@ footer{
 }
 .footer-text{
     text-align: center;
+}
+
+@media (max-width : 1280px) {
+    .salon-info-texts span{
+        width: 500px;
+    }
+    .salon-info_wrapper img{
+        width: 400px;
+        height: 400px;
+    }
+
+}
+@media (max-width : 1024px) {
+    .specialist-info{
+        gap: 0;
+        padding: 10px;
+    }
+    .salon-info_wrapper{
+        flex-direction: column-reverse;
+    }
+    .salon-info-texts h2{
+        text-align: center;
+    }
+    .salon-info-texts span{
+        text-align: center;
+        width: 100%;
+    }
+
+}
+@media (max-width : 640px) {
+   .header-topbars{
+    display: none;
+   }
+   .header-top_menu{
+    display: block;
+    background-color: transparent;
+    border: none;
+   }
+   .header-top_button{
+    padding: 5px;
+    font-size: 12px;
+   }
+   .salon-name{
+    font-size: 3rem;
+   }
+   .info-wrapper{
+    gap: 10px;
+   }
+   .info-wrapper span{
+    text-align: center;
+    font-size: 14px;
+   }
+   .info-wrapper p{
+    font-size: 12px;
+   }
+   .info-icons{
+    width: 43px;
+    height: 43px;
+   }
+   .service span{
+    padding: 5px;
+    font-size: 16px;
+   }
+     .specialist-info span{
+    font-size: 12px;
+    }
+   .specialist-info p{
+    font-size: 12px;
+    }
+
+
+}
+@media (max-width : 480px) {
+    .header-content_wrapper{
+    height: 300px;
+    margin-top: 50px;
+    }
+    .header-img{
+        height: 400px;
+    }
+    .salon-name{
+    font-size: 2rem;
+   }
+   .info-icons{
+    width: 30px;
+    height: 30px;
+   }
+    .info-wrapper span{
+    font-size: 10px;
+   }
+    .info-wrapper p{
+    font-size: 10px;
+   }
+   .line-between{
+    width: 1px;
+    margin: 0 8px;
+   }
+   .services{
+    margin-top: 50px;
+   }
+   .services h2{
+    font-size: 24px;
+   }
+   .service span{
+    padding: 3px;
+    font-size: 12px;
+   }
+   .specialists{
+    margin-top: 50px;
+   }
+   .Specialists h2{
+    font-size: 24px;
+   }
+    .specialist-info span{
+    font-size: 10px;
+    }
+   .specialist-info p{
+    font-size: 8px;
+    }
+    .salon-info_wrapper{
+        gap: 20px;
+    }
+    .salon-info_wrapper img{
+        width: 200px;
+        height: 200px;
+    }
+    .salon-info-texts span{
+        font-size: 14px;
+    }
+    .salon-info-texts h2{
+        font-size: 24px;
+    }
 }
