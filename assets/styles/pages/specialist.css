@@ -49,7 +49,6 @@
 }
 .samples-wrapper{
     margin-top: 50px;
-    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,3 +60,21 @@
     border-radius: 20px;
 }
 
+/* responive section */
+
+@media (max-width : 480px) {
+    .specialists-section img , .samples-wrapper img{
+        width: 200px;
+        height: 200px;
+    }
+    .specialists-info span{
+        font-size: 20px;
+    }
+    .specialists-info p{
+        font-size: 14px;
+    }
+    .scoring button{
+        padding: 5px;
+        font-size: 14px;
+    }
+}
