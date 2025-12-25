@@ -6,6 +6,10 @@
     justify-content: space-between;
     padding-top: 20px;
 }
+.header-icons-wrapper img{
+    width: 38px;
+    height: 38px;
+}
  /* header section  */ 
 
  /* services info section   */ 
@@ -75,3 +79,32 @@
     height: 28px;
 }
  /* services info section   */ 
+
+
+ /* responsive section */
+
+ @media (max-width : 640px) {
+    .services-info_top img{
+        width: 400px;
+        height: 200px;
+    }
+    .services-info_top h1{
+        font-size: 24px;
+    }
+}
+ @media (max-width : 480px) {
+    .specialist-section span{
+        font-size: 20px;
+    }
+    .specialist-section img{
+        width: 60px;
+        height: 60px;
+    }
+    .services-info_top img{
+        width: 300px;
+    }
+    .header-icons-wrapper img{
+        width: 30px;
+        height: 30px;
+    }
+}
