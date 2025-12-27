@@ -7,7 +7,10 @@ const alert = (icon, text, confirmButtonText) => {
     icon: icon,
   });
 };
-
+const getToken = () => {
+  const token = localStorage.getItem("sb-vyrgkkuzadefqirmzrej-auth-token");
+  return token;
+};
 // const checkAuth = async () => {
 //   const {
 //     data: { user },
@@ -22,4 +25,4 @@ const alert = (icon, text, confirmButtonText) => {
 //     userHeaderName.innerHTML = "ورود | ثبت نام";
 //   }
 // };
-export { alert };
+export { alert, getToken };

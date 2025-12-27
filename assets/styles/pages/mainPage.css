@@ -73,11 +73,19 @@
     padding: 20px;
     border-radius: 20px;
 }
-.user-info{
+.user-info , .user-infos{
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 0 0 10px 0;
+}
+.user-infos{
+    justify-content: space-between;
+}
+.user-infos > span{
+    transform: rotate(45deg);
+    font-size: 30px;
+    cursor: pointer;
 }
 .user-info img{
     width: 50px;
@@ -87,6 +95,9 @@
 }
 .user-info span{
     font-family: "vazir-bold"
+}
+.user-menue {
+    display: none;
 }
 .user-menue ul{
     margin-top: 20px;
