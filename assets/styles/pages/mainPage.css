@@ -63,6 +63,46 @@
     background-color: var(--primary-color);
     border-radius: 20px;
 }
+.user-menue{
+    position: absolute;
+    left: 10px;
+    top: 80px;
+    width: 300px;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 20px;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 0 10px 0;
+}
+.user-info img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.user-info span{
+    font-family: "vazir-bold"
+}
+.user-menue ul{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.user-menue ul li{
+    border-bottom: 1px solid var(--primary-color);
+    padding: 5px 5px 10px 0;
+    transition: all 200ms ease-in;
+}
+.user-menue ul li:hover{
+   background-color: var(--primary-color);
+   border-radius: 20px;
+}
 /* header section */
 
 /* information section  */
