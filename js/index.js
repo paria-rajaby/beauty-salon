@@ -1,8 +1,9 @@
 import { supabase } from "../js/supabase.js";
-import { getToken } from "./utils.js";
+import { getToken, alert } from "./utils.js";
 const userHeaderName = document.querySelector(".header-top_button");
 const userMenu = document.querySelector(".user-menue");
 const removeMenuButton = document.querySelector(".remove-menu");
+const logoutButton = document.querySelector("#logout");
 
 const checkAuth = async () => {
   const {
@@ -36,9 +37,24 @@ const removeMenu = () => {
     userMenu.style.display = "none";
   });
 };
+const logout = () => {
+  logoutButton.addEventListener("click", async () => {
+    const result = await alert(
+      "warning",
+      "ایا از خروج از حساب کاربری خود اطمینان دارید ؟",
+      "بله",
+      "خیر"
+    );
+    if (result.isConfirmed) {
+      await supabase.auth.signOut();
+      window.location.href = "/index.html";
+    }
+  });
+};
 
 window.addEventListener("load", () => {
   checkAuth();
   openMenu();
   removeMenu();
+  logout();
 });
