@@ -1,9 +1,10 @@
 import { supabase } from "../js/supabase.js";
-import { getToken, alert } from "./utils.js";
+import { getToken, alert, getInfos, mySwiper } from "./utils.js";
 const userHeaderName = document.querySelector(".header-top_button");
 const userMenu = document.querySelector(".user-menue");
 const removeMenuButton = document.querySelector(".remove-menu");
 const logoutButton = document.querySelector("#logout");
+const SpecialistsWrapper = document.querySelector(".swiper-wrapper");
 
 const checkAuth = async () => {
   const {
@@ -51,10 +52,30 @@ const logout = () => {
     }
   });
 };
+const getSpecialistsInfos = async () => {
+  mySwiper(1, 2, 3);
 
+  const Infos = await getInfos();
+  Infos.forEach((info) => {
+    SpecialistsWrapper.insertAdjacentHTML(
+      "beforeend",
+      `
+        <div class="specialist swiper-slide">
+                <img src=${info.person_img} alt="">
+                <div class="specialist-info">
+                    <span>${info.person}</span>
+                    <p>${info.title}</p>
+                </div>
+            </div>
+    `
+    );
+  });
+};
 window.addEventListener("load", () => {
   checkAuth();
   openMenu();
   removeMenu();
   logout();
+  getInfos();
+  getSpecialistsInfos();
 });
