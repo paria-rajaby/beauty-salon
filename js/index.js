@@ -5,6 +5,7 @@ const userMenu = document.querySelector(".user-menue");
 const removeMenuButton = document.querySelector(".remove-menu");
 const logoutButton = document.querySelector("#logout");
 const SpecialistsWrapper = document.querySelector(".swiper-wrapper");
+const servicesWrapper = document.querySelector(".services-wrapper");
 
 const checkAuth = async () => {
   const {
@@ -52,6 +53,22 @@ const logout = () => {
     }
   });
 };
+const getServicesInfos = async () => {
+  const Infos = await getInfos();
+  Infos.forEach((info, index) => {
+    servicesWrapper.insertAdjacentHTML(
+      "beforeend",
+      `
+        <div class="service div${index + 1}">
+            <a href="/pages/services.html?services=${info.title}"><img src=${
+        info.work_img
+      }></a>
+            <span>${info.title}</span>
+        </div>
+      `
+    );
+  });
+};
 const getSpecialistsInfos = async () => {
   mySwiper(1, 2, 3);
 
@@ -77,5 +94,6 @@ window.addEventListener("load", () => {
   removeMenu();
   logout();
   getInfos();
+  getServicesInfos();
   getSpecialistsInfos();
 });
