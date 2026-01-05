@@ -1,14 +1,39 @@
-const alert = (icon, text, confirmButtonText, cancelButtonText) => {
+const alert = (
+  icon,
+  text,
+  confirmButtonText,
+  cancelButtonText,
+  input,
+  inputOptions
+) => {
   return Swal.fire({
     text,
     confirmButtonText,
     icon,
+    input,
+    inputOptions,
+
     ...(cancelButtonText && {
       showCancelButton: true,
       cancelButtonText,
     }),
   });
 };
+
+// const { value: importance } = await Swal.fire({
+//   title: "اهمیت این کار چقدره؟",
+//   input: "radio",
+//   inputOptions: {
+//     low: "کم",
+//     medium: "متوسط",
+//     high: "زیاد",
+//   },
+//   confirmButtonText: "ثبت",
+//   inputValidator: (value) => {
+//     if (!value) return "باید یکی رو انتخاب کنی!";
+//   },
+// });
+
 const getWorkSamples = async () => {
   const url = `https://vyrgkkuzadefqirmzrej.supabase.co`;
   const key =

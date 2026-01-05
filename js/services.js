@@ -4,9 +4,12 @@ import {
   getWorkSamples,
   mySwiper,
   myCustomSwiper,
+  getToken,
+  alert,
 } from "./utils.js";
 const servicesInfoWrapper = document.querySelector(".services-info-wrapper ");
 let worksamplesImgsWrapper = null;
+let reservationBtn = null;
 
 const workSamples = async () => {
   const service = getUrlParam("services");
@@ -24,7 +27,6 @@ const workSamples = async () => {
   });
   myCustomSwiper();
 };
-
 const getService = async () => {
   const service = getUrlParam("services");
   const services = await getInfos();
@@ -54,7 +56,7 @@ const getService = async () => {
             <p>${selectedService.service_desc}</p>
         </div>
         <div class="services-info_bottom">
-            <button>
+            <button id="reservation">
                 رزرو نوبت
                  <img src="/assets/svg/icons8-arrow-left-50.png" alt="left">
             </button>
@@ -63,6 +65,41 @@ const getService = async () => {
   );
   worksamplesImgsWrapper = document.querySelector(".slider-track");
   await workSamples();
+  reservationFunc();
+};
+
+const reservationFunc = () => {
+  reservationBtn = document.querySelector("#reservation");
+  const token = getToken();
+  reservationBtn.addEventListener("click", async () => {
+    if (token) {
+      const result = await alert(
+        "",
+        "نوبت خود را انتخاب کنید",
+        "رزرو",
+        "خروج",
+        "radio",
+        {
+          time1: "شنبه ساعت 10 صبح",
+          time2: "دوشنبه ساعت 4 بعد از ظهر",
+          time3: "چهارشنبه ساعت 6 عصر",
+        }
+      );
+      if (result.isConfirmed) {
+        window.location.href = "signin.html";
+      }
+    } else {
+      const result = await alert(
+        "warning",
+        "برای رزرو نوبت وارد حساب کاربری خود شوید",
+        "ایجاد / ورود حساب",
+        "خروج"
+      );
+      if (result.isConfirmed) {
+        window.location.href = "signin.html";
+      }
+    }
+  });
 };
 
 window.addEventListener("load", async () => {

@@ -22,6 +22,9 @@ a{
     margin: 0 auto;
     /* padding: 0 1rem; */
 }
+.swal2-radio{
+  flex-direction: column;
+}
 
 @media (min-width: 340px) {
   .container { max-width: 330px; }
