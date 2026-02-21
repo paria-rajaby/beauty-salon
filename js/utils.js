@@ -4,7 +4,7 @@ const alert = (
   confirmButtonText,
   cancelButtonText,
   input,
-  inputOptions
+  inputOptions,
 ) => {
   return Swal.fire({
     text,
@@ -101,7 +101,12 @@ const myCustomSwiper = () => {
   const nextBtn = document.querySelector("#next");
   const prevBtn = document.querySelector("#prev");
   let currentPosition = 0;
-  const step = 500;
+  let step;
+  const setStep = () => {
+    step = window.innerWidth >= 520 ? 500 : 300;
+  };
+  setStep();
+  window.addEventListener("resize", setStep);
 
   function moveSlider(direction) {
     if (direction === "next" && currentPosition < slides.length - 2) {
