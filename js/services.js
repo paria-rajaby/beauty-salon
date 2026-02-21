@@ -15,14 +15,14 @@ const workSamples = async () => {
   const service = getUrlParam("services");
   const workSamplesInfos = await getWorkSamples();
   const selectedworkSamples = workSamplesInfos.filter(
-    (workSample) => workSample.title === service
+    (workSample) => workSample.title === service,
   );
   selectedworkSamples.forEach((sample) => {
     worksamplesImgsWrapper.insertAdjacentHTML(
       "beforeend",
       `
         <img class="slide" src=${sample.img}>
-    `
+    `,
     );
   });
   myCustomSwiper();
@@ -61,7 +61,7 @@ const getService = async () => {
                  <img src="/assets/svg/icons8-arrow-left-50.png" alt="left">
             </button>
         </div>
-    `
+    `,
   );
   worksamplesImgsWrapper = document.querySelector(".slider-track");
   await workSamples();
@@ -83,17 +83,21 @@ const reservationFunc = () => {
           time1: "شنبه ساعت 10 صبح",
           time2: "دوشنبه ساعت 4 بعد از ظهر",
           time3: "چهارشنبه ساعت 6 عصر",
-        }
+        },
       );
       if (result.isConfirmed) {
-        window.location.href = "signin.html";
+        const result = await alert(
+          "success",
+          "نوبت شما با موفقیت ثبت شد",
+          "تایید",
+        );
       }
     } else {
       const result = await alert(
         "warning",
         "برای رزرو نوبت وارد حساب کاربری خود شوید",
         "ایجاد / ورود حساب",
-        "خروج"
+        "خروج",
       );
       if (result.isConfirmed) {
         window.location.href = "signin.html";
