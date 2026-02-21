@@ -45,7 +45,7 @@ const logout = () => {
       "warning",
       "ایا از خروج از حساب کاربری خود اطمینان دارید ؟",
       "بله",
-      "خیر"
+      "خیر",
     );
     if (result.isConfirmed) {
       await supabase.auth.signOut();
@@ -61,11 +61,11 @@ const getServicesInfos = async () => {
       `
         <div class="service div${index + 1}">
             <a href="/pages/services.html?services=${info.title}"><img src=${
-        info.work_img
-      }></a>
+              info.work_img
+            }></a>
             <span>${info.title}</span>
         </div>
-      `
+      `,
     );
   });
 };
@@ -78,13 +78,15 @@ const getSpecialistsInfos = async () => {
       "beforeend",
       `
         <div class="specialist swiper-slide">
+        <a href="/pages/specialist.html?specialist=${info.person}">
                 <img src=${info.person_img} alt="">
                 <div class="specialist-info">
                     <span>${info.person}</span>
                     <p>${info.title}</p>
                 </div>
-            </div>
-    `
+         </a>        
+            </div>      
+    `,
     );
   });
 };

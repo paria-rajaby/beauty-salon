@@ -64,7 +64,6 @@ const getInfos = async () => {
   const infos = await response.json();
   return infos;
 };
-
 const getToken = () => {
   const token = localStorage.getItem("sb-vyrgkkuzadefqirmzrej-auth-token");
   return token;
