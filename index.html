@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/assets/styles/reset.css">
     <link rel="stylesheet" href="/assets/styles/variable.css">
     <link rel="stylesheet" href="/assets/styles/pages/mainPage.css">
+    <link rel="stylesheet" href="/assets/styles/loader.css">
 </head>
 <body>
     <!-- header section -->
@@ -31,7 +32,7 @@
                         <!-- data loaded from js -->
                     </a>
                     <div class="user-menue">
-                        <div class="user-infos">
+                        <!-- <div class="user-infos">
                             <div class="user-info">
                                 <img src="/assets/images/f39823033d883601c8e6a84b962c05d8.jpg" alt="">
                                 <span>زهرا محمدی</span>
@@ -42,7 +43,7 @@
                             <li><a href="">اکانت من</a></li>
                             <li><a href=""> نوبت های رزرو شده</a></li>
                             <li><a id="logout">خروج</a></li> 
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </div>
@@ -131,8 +132,15 @@
         </div>
      </footer>
     <!-- footer section -->
+    <!-- loader section -->
+     <div id="loader-wrapper">
+        <div class="loader">
+        </div>
+     </div>
+    <!-- loader section -->
      <script src="/vendor/swiper-bundle.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script type="module" src="/js/loader.js"></script>
      <script type="module" src="/js/index.js"></script>
 </body>
 </html>

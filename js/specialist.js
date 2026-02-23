@@ -70,6 +70,26 @@ const getService = async () => {
   );
   scoringSection();
 };
+const workSamples = async () => {
+  const samplesWrapper = document.querySelector(".samples-wrapper");
+  const specialist = getUrlParam("specialist");
+  const workSamplesInfos = await getWorkSamples();
+  console.log(workSamplesInfos);
+
+  const selectedworkSamples = workSamplesInfos.filter(
+    (workSample) => workSample.specialist === specialist,
+  );
+  selectedworkSamples.forEach((sample) => {
+    samplesWrapper.insertAdjacentHTML(
+      "beforeend",
+      `
+          <img class="slide" src=${sample.img}>
+      `,
+    );
+  });
+  myCustomSwiper();
+};
 window.addEventListener("load", () => {
   getService();
+  workSamples();
 });

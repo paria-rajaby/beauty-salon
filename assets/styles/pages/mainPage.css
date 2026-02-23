@@ -166,59 +166,22 @@
 .services-wrapper {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     gap: 8px;
 }
+.service{
+    height: 300px;
+}    
 .service img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
 }    
-    
-.div1 {
-    grid-column: span 3 / span 3;
-    grid-row: span 2 / span 2;
-}
-
-.div2 {
-    grid-column: span 3 / span 3;
-    grid-column-start: 4;
-}
-
-.div3 {
-    grid-column: span 3 / span 3;
-    grid-column-start: 4;
-    grid-row-start: 2;
-}
-
-.div4 {
-    grid-column: span 3 / span 3;
-    grid-row: span 2 / span 2;
-    grid-column-start: 7;
-    grid-row-start: 1;
-}
-
-.div5 {
-    grid-column: span 3 / span 3;
-    grid-row: span 2 / span 2;
-    grid-row-start: 3;
-}
-
-.div6 {
-    grid-column: span 3 / span 3;
-    grid-row: span 2 / span 2;
-    grid-column-start: 4;
-    grid-row-start: 3;
-}
-
 .div7 {
-    grid-column: span 3 / span 3;
-    grid-row: span 2 / span 2;
-    grid-column-start: 7;
-    grid-row-start: 3;
-}
+    grid-column: 2;
+} 
    
 .service{
     position: relative;
@@ -374,6 +337,13 @@ footer{
     }
 
 }
+@media (max-width : 870px) {
+    
+    .service {
+    height: 200px;
+    }
+
+}
 @media (max-width : 640px) {
    .header-topbars{
     display: none;
@@ -408,14 +378,12 @@ footer{
     padding: 5px;
     font-size: 16px;
    }
-     .specialist-info span{
+    .specialist-info span{
     font-size: 12px;
     }
    .specialist-info p{
     font-size: 12px;
     }
-
-
 }
 @media (max-width : 480px) {
     .header-content_wrapper{
@@ -479,5 +447,8 @@ footer{
     }
     .salon-info-texts h2{
         font-size: 24px;
+    }
+    .service {
+    height: 100px;
     }
 }
