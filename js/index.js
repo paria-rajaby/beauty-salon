@@ -7,11 +7,14 @@ const userMenu = document.querySelector(".user-menue");
 const logoutButton = document.querySelector("#logout");
 const SpecialistsWrapper = document.querySelector(".swiper-wrapper");
 const servicesWrapper = document.querySelector(".services-wrapper");
+let userName;
 
 const checkAuth = async () => {
   const {
     data: { user },
   } = await supabase.auth.getUser();
+
+  userName = user ? user.user_metadata.username : null;
 
   if (user) {
     const name = user.user_metadata.username;
@@ -36,8 +39,8 @@ const openMenu = () => {
 
     userMenueWrapper.innerHTML = `<div class="user-infos">
         <div class="user-info">
-          <img src="/assets/images/f39823033d883601c8e6a84b962c05d8.jpg" alt="">
-          <span>زهرا محمدی</span>
+          <img src="/assets/images/admin.jpg" alt="photo">
+          <span>${userName}</span>
         </div>
         <span class="remove-menu">+</span>
       </div>

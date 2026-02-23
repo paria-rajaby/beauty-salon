@@ -1,3 +1,4 @@
+import { startRequest, hideLoader } from "./loader.js";
 const alert = (
   icon,
   text,
@@ -19,50 +20,43 @@ const alert = (
     }),
   });
 };
-
-// const { value: importance } = await Swal.fire({
-//   title: "اهمیت این کار چقدره؟",
-//   input: "radio",
-//   inputOptions: {
-//     low: "کم",
-//     medium: "متوسط",
-//     high: "زیاد",
-//   },
-//   confirmButtonText: "ثبت",
-//   inputValidator: (value) => {
-//     if (!value) return "باید یکی رو انتخاب کنی!";
-//   },
-// });
-
 const getWorkSamples = async () => {
   const url = `https://vyrgkkuzadefqirmzrej.supabase.co`;
   const key =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5cmdra3V6YWRlZnFpcm16cmVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYyMTUyMTUsImV4cCI6MjA4MTc5MTIxNX0.DM6irl8qtwI_UVTB6EPx2YKbg7hP5S_xPG9EumX_QLM";
-
-  const response = await fetch(`${url}/rest/v1/service_imgs?select=*`, {
-    method: "GET",
-    headers: {
-      apikey: key,
-      Authorization: `Bearer ${key}`,
-    },
-  });
-  const data = await response.json();
-  return data;
+  try {
+    startRequest();
+    const response = await fetch(`${url}/rest/v1/service_imgs?select=*`, {
+      method: "GET",
+      headers: {
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+      },
+    });
+    const data = await response.json();
+    return data;
+  } finally {
+    hideLoader();
+  }
 };
 const getInfos = async () => {
   const url = `https://vyrgkkuzadefqirmzrej.supabase.co`;
   const key =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ5cmdra3V6YWRlZnFpcm16cmVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYyMTUyMTUsImV4cCI6MjA4MTc5MTIxNX0.DM6irl8qtwI_UVTB6EPx2YKbg7hP5S_xPG9EumX_QLM";
-
-  const response = await fetch(`${url}/rest/v1/Services?select=*`, {
-    method: "GET",
-    headers: {
-      apikey: key,
-      Authorization: `Bearer ${key}`,
-    },
-  });
-  const infos = await response.json();
-  return infos;
+  try {
+    startRequest();
+    const response = await fetch(`${url}/rest/v1/Services?select=*`, {
+      method: "GET",
+      headers: {
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+      },
+    });
+    const infos = await response.json();
+    return infos;
+  } finally {
+    hideLoader();
+  }
 };
 const getToken = () => {
   const token = localStorage.getItem("sb-vyrgkkuzadefqirmzrej-auth-token");
