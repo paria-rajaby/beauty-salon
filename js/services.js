@@ -58,7 +58,7 @@ const getService = async () => {
         <div class="services-info_bottom">
             <button id="reservation">
                 رزرو نوبت
-                 <img src="assets/svg/icons8-arrow-left-50.png" alt="left">
+                 <img src="../assets/svg/icons8-arrow-left-50.png" alt="left">
             </button>
         </div>
     `,
