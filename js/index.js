@@ -39,7 +39,7 @@ const openMenu = () => {
 
     userMenueWrapper.innerHTML = `<div class="user-infos">
         <div class="user-info">
-          <img src="/assets/images/admin.jpg" alt="photo">
+          <img src="assets/images/admin.jpg" alt="photo">
           <span>${userName}</span>
         </div>
         <span class="remove-menu">+</span>
@@ -80,7 +80,7 @@ const getServicesInfos = async () => {
         "beforeend",
         `
         <div class="service div${index + 1}">
-            <a href="/pages/services.html?services=${info.title}"><img src=${
+            <a href="pages/services.html?services=${info.title}"><img src=${
               info.work_img
             }></a>
             <span>${info.title}</span>
@@ -103,7 +103,7 @@ const getSpecialistsInfos = async () => {
         "beforeend",
         `
         <div class="specialist swiper-slide">
-        <a href="/pages/specialist.html?specialist=${info.person}">
+        <a href="pages/specialist.html?specialist=${info.person}">
                 <img src=${info.person_img} alt="">
                 <div class="specialist-info">
                     <span>${info.person}</span>
