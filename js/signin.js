@@ -16,7 +16,7 @@ form.addEventListener("submit", async (event) => {
     alert("error", " ایمیل یا رمز عبور اشتباه است!", "تلاش مجدد");
   } else {
     alert("success", "  ورود با موفقیت انجام شد", "ورود").then(
-      () => (location.href = "/index.html")
+      () => (location.href = "index.html"),
     );
   }
 });

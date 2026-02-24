@@ -26,7 +26,7 @@ const checkAuth = async () => {
   if (getToken()) {
     userHeaderName.href = "javascript:void(0)";
   } else {
-    userHeaderName.href = "/pages/signin.html";
+    userHeaderName.href = "pages/signin.html";
   }
 };
 const openMenu = () => {
