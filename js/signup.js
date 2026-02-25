@@ -20,7 +20,7 @@ form.addEventListener("submit", async (event) => {
     alert("error", "ثبت نام نا موفق بود !", "تلاش مجدد");
   } else {
     alert("success", " ثبت نام با موفقیت انجام شد", "ورود").then(
-      () => (location.href = "/index.html"),
+      () => (location.href = "../index.html"),
     );
   }
 });
