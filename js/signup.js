@@ -1,6 +1,13 @@
 import { supabase } from "./supabase.js";
 import { alert } from "./utils.js";
+async function checkAuth() {
+  const { data } = await supabase.auth.getSession();
+  if (data.session) {
+    window.location.replace("../index.html");
+  }
+}
 
+checkAuth();
 const form = document.querySelector(".login-form");
 
 form.addEventListener("submit", async (event) => {
@@ -19,8 +26,8 @@ form.addEventListener("submit", async (event) => {
   if (error) {
     alert("error", "ثبت نام نا موفق بود !", "تلاش مجدد");
   } else {
-    alert("success", " ثبت نام با موفقیت انجام شد", "ورود").then(
-      () => (location.href = "../index.html"),
+    alert("success", " ثبت نام با موفقیت انجام شد", "ورود").then(() =>
+      window.location.replace("../index.html"),
     );
   }
 });
