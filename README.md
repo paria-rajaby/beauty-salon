@@ -1,3 +1,5 @@
+#⚠️This project is currently broken due to database schema issues in Supabase and is not maintained.
+
 # 💄 Beauty Salon Web App
 
 A modern beauty salon web application built with Vanilla JavaScript and Supabase.
